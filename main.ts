@@ -1,4 +1,19 @@
-//  Global Variables
-let player_name = "Player 1"
+//  Intro
+function Intro() {
+    
+    game.splash("St Plaguey's", "Made by Programming Club")
+    player_name = game.askForString("Enter your name...")
+    return
+}
+
+function go() {
+    game.setGameOverMessage(true, "GAME OVER!")
+    game.setGameOverEffect(true, effects.confetti)
+    game.gameOver(true)
+    return
+}
+
+let player_name = ""
 //  Game Start
-game.splash("St Plaguey's", "Made by Programming Club")
+Intro()
+go()
