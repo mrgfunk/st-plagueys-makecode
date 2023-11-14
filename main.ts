@@ -6,7 +6,7 @@ function Intro() {
     return
 }
 
-function go() {
+function GameOver() {
     game.setGameOverMessage(true, "GAME OVER!")
     game.setGameOverEffect(true, effects.confetti)
     game.gameOver(true)
@@ -16,4 +16,4 @@ function go() {
 let player_name = ""
 //  Game Start
 Intro()
-go()
+GameOver()

@@ -4,7 +4,7 @@ def Intro():
     game.splash("St Plaguey's", "Made by Programming Club")
     player_name = game.ask_for_string("Enter your name...")
     return
-def go():
+def GameOver():
     game.set_game_over_message(True, "GAME OVER!")
     game.set_game_over_effect(True, effects.confetti)
     game.game_over(True)
@@ -12,4 +12,4 @@ def go():
 player_name = ""
 # Game Start
 Intro()
-go()
+GameOver()
