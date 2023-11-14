@@ -1,3 +1,13 @@
+//  Level 1
+function Level1(): Sprite {
+    tiles.setCurrentTilemap(tilemap`level1`)
+    let player_character = sprites.create(assets.image`player_character`, SpriteKind.Player)
+    controller.moveSprite(player_character)
+    scene.cameraFollowSprite(player_character)
+    tiles.placeOnTile(player_character, tiles.getTileLocation(0, 7))
+    return player_character
+}
+
 //  Intro
 function Intro() {
     
@@ -15,6 +25,7 @@ function Intro() {
     return
 }
 
+//  End of Game
 function GameOver() {
     game.setGameOverMessage(true, "GAME OVER!")
     game.setGameOverEffect(true, effects.confetti)
@@ -22,8 +33,9 @@ function GameOver() {
     return
 }
 
+//  Auto Stuff
 let cutscene_character : Sprite = null
 let player_name = ""
 //  Game Start
-Intro()
-GameOver()
+// Intro()
+let pc = Level1()
