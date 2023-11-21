@@ -9,6 +9,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "start_cutscene"
     },
+    "image3": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAEAEAAAAAAAARAAAAAAAAEAEAAAAAAAARAAAAAAAAEAEAAAAAAAARAAAAAAAAEAEAAAAAAAARAAAAAAAAEAEAAAAAAAARAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
