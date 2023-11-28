@@ -3,6 +3,7 @@ namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
     export const transparency16 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
+
     export const tile2 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile1 = image.ofBuffer(hex``);
@@ -43,6 +44,7 @@ namespace myTiles {
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
+
 `, [myTiles.transparency16,sprites.castle.tileGrass1,sprites.castle.tilePath1,sprites.castle.tilePath5,sprites.castle.tilePath2,sprites.castle.tilePath8,sprites.castle.tilePath4,sprites.castle.tilePath6,sprites.castle.tilePath3,sprites.castle.tilePath7,sprites.castle.tilePath9,sprites.builtin.forestTiles0], TileScale.Sixteen);
             case "level0":
             case "level4":return tiles.createTilemap(hex`1000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`, img`
@@ -91,6 +93,7 @@ namespace myTiles {
 2 . . . . . 2 
 2 2 2 2 2 2 2 
 `, [myTiles.transparency16,sprites.dungeon.purpleOuterNorthEast,sprites.dungeon.purpleOuterNorthWest,sprites.dungeon.purpleOuterSouthEast,sprites.dungeon.purpleOuterNorth1,sprites.dungeon.purpleOuterWest1,sprites.dungeon.purpleOuterSouthWest,sprites.dungeon.purpleOuterNorth2,sprites.dungeon.purpleOuterWest2,sprites.dungeon.purpleOuterSouth1,sprites.dungeon.purpleOuterEast0,sprites.dungeon.floorDarkDiamond,sprites.dungeon.doorOpenSouth,sprites.dungeon.doorOpenEast,sprites.dungeon.doorOpenWest,sprites.dungeon.doorOpenNorth,sprites.dungeon.floorDark4,sprites.dungeon.floorDark3,sprites.dungeon.floorDark0,sprites.dungeon.floorDark1,sprites.dungeon.floorDark5,sprites.dungeon.floorDark2,sprites.dungeon.purpleSwitchUp], TileScale.Sixteen);
+
         }
         return null;
     })
@@ -98,6 +101,7 @@ namespace myTiles {
     helpers._registerFactory("tile", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "transparency16":return transparency16;
+
             case "door2":
             case "tile2":return tile2;
             case "door1":
