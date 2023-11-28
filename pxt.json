@@ -4,7 +4,7 @@
     "dependencies": {
         "device": "*",
         "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
-        "Inventory": "github:UnsignedArduino/Inventory#v1.1.1"
+        "Inventory": "github:unsignedarduino/inventory#v1.1.1"
     },
     "files": [
         "main.blocks",
@@ -30,20 +30,20 @@
     "preferredEditor": "pyprj",
     "palette": [
         "#000000",
-        "#7DDA43",
-        "#5E664C",
-        "#7D8564",
-        "#996600",
-        "#4D3300",
-        "#EEDCAA",
-        "#AC9B6C",
         "#FFFFFF",
-        "#9C9C9C",
-        "#000000",
-        "#2F5183",
-        "#223A5E",
-        "#642E88",
-        "#B63838",
-        "#742929"
+        "#FF2121",
+        "#FF93C4",
+        "#FF8135",
+        "#FFF609",
+        "#249CA3",
+        "#78DC52",
+        "#003FAD",
+        "#87F2FF",
+        "#8E2EC4",
+        "#A4839F",
+        "#5C406c",
+        "#E5CDC4",
+        "#91463d",
+        "#000000"
     ]
 }
