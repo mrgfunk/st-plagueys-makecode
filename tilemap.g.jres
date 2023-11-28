@@ -10,6 +10,12 @@
         "tilemapTile": true,
         "displayName": "Wooden Floor Tiles 1"
     },
+    "tile2": {
+        "data": "hwQQABAAAAAlJfUlVVJS/kNkUyVDZFNObmVDRmNlQ0ZjRENfY0RDIlVfIl7lXyVSRD5mNEQlZjRlNVTkZSVU5EU0ZDYlMmQ29VUl715S5VVDZFNFQ2TzRWNlQ0ZjZUJGY0RD5WNEQiVVUlJfJVVSJUQlZDZEPmImZTVeNGU/UjRONGY0RTRm5A==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "Ruined Wooden Floor Tile 1"
+    },
     "level1": {
         "id": "level1",
         "mimeType": "application/mkcd-tilemap",
