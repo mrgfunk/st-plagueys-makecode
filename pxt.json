@@ -28,6 +28,7 @@
         "arcade"
     ],
     "preferredEditor": "pyprj",
+    "languageRestriction": "python-only",
     "palette": [
         "#000000",
         "#7DDA43",
