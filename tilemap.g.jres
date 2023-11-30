@@ -1,106 +1,28 @@
 {
-    "myTiles.transparency16": {
-        "id": "myTiles.transparency16",
+    "transparency16": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "myTiles.tile2": {
-        "id": "myTiles.tile2",
-        "data": "hwQQABAAAADdHd0d3R3dHRER3R0REd0d3e7u7u7u7u7dzszMzMzMzN3O7u7u7u7u3c7u7u7l7u7dzu7u7u7u7t3O/v7/7u7u3c7+/v7u7u4Rzv7//u7u7t3O7u7u7u7u3c7u7u7u7u7dzszMzMzMzN3u7u7u7u7u3R3dHd0d3R3dHd0d3R3dHQ==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "door2"
-    },
-    "myTiles.tile1": {
-        "id": "myTiles.tile1",
-        "data": "hwQQABAAAADdHd0d3R3dHRER3R0REd0d3e7u7u7u7u7dzszMzMzMzN3O7u7u7u7u3c7u7u7l7u7dzu7u7u7u7t3O/u7v7u7u3c7+/+/u7u4Rzu7u7+7u7t3O7u7u7u7u3c7u7u7u7u7dzszMzMzMzN3u7u7u7u7u3R3dHd0d3R3dHd0d3R3dHQ==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "door1"
-    },
-    "myTiles.tile3": {
-        "id": "myTiles.tile3",
-        "data": "hwQQABAAAABmZmZmxmZmZma2ZmbGZsZsy2bGtsxmzGbGZmZmbGbGZmbMaWZsaWZsZsZmxmZmZmZmZmZmZmZmZmZmZrZmZsxrZrZmZmZmxmZmZmZmZrbGZmZmxsxmZsxmZmZsZmZmZmaWZrxmZsZma2ZmZmZma2xmZmZmxmZmyWbMzGZmZmZmZg==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "dungeonvoid"
-    },
-    "myTiles.tile4": {
-        "id": "myTiles.tile4",
+    "tile4": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "myTiles.tile5": {
-        "id": "myTiles.tile5",
+    "tile5": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
-    "myTiles.tile9": {
-        "id": "myTiles.tile9",
-        "data": "hwQQABAAAADMzMzMzMzMrLvdvN3d293Nu9283d3b3c273by7u7y7q7vd7O7u7u7uu93s7u5e7u673ezu7u7u7rvd7O/+7u7uu93s///u7u673ezu/u7u7rvd7O7u7u7uu93s7u7u7u673by7u7y7q7vdvN3d293Nu9283d3b3c3MzMzMzMzMrA==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "doorClosedNorth"
-    },
-    "myTiles.tile6": {
-        "id": "myTiles.tile6",
-        "data": "hwQQABAAAAC8u7u7u7u7y7y7u7u7u7vL3N3d3d3d3c3c3d3d3d3dzczMzMzMzMzMvLvu7u7uu8vcve7/7+7bzdy97u/u7tvN3L3u/+/u283cve7u7+7bzbzL7v/v7rzL3L3u7u7l283cve7u7u7bzdy97u7u7tvN3L3u7u7u283KrO7u7u7KrA==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "doorClosedWest"
-    },
-    "myTiles.tile7": {
-        "id": "myTiles.tile7",
-        "data": "hwQQABAAAADKzMzMzMzMzNzdvd3dy9273N293d3L3bu6u8u7u8vdu+7u7u7uzt277u7u7u7O3bvu7v7//87du+7u/v7+zt277u7+/v7O3bvu7u7u7s7du+7u5e7uzt277u7u7u7O3bu6u8u7u8vdu9zdvd3dy9273N293d3L3bvKzMzMzMzMzA==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "doorClosedSouth"
-    },
-    "myTiles.tile8": {
-        "id": "myTiles.tile8",
-        "data": "hwQQABAAAADKrO7u7u7KrNy97u7u7tvN3L3u7u7u283cve7u7u7bzdy9Xu7u7tvNvMvu7u/uvMvcve7//+7bzdy97u/v7tvN3L3u7+7u283cve7v7u7bzby77u7u7rvLzMzMzMzMzMzc3d3d3d3dzdzd3d3d3d3NvLu7u7u7u8u8u7u7u7u7yw==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
-        "mimeType": "image/x-mkcd-f4",
-        "tilemapTile": true,
-        "displayName": "doorClosedEast"
-    },
-    "myTiles.tile10": {
-        "id": "myTiles.tile10",
+    "tile10": {
         "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true
     },
     "level2": {
         "id": "level2",
-        "data": "MTAwZjAwMGYwMDAzMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwOTA1MTAwZjBmMGYxNTBmMWUwZjBmMGYwMjBmMTMwNzA2MGYxMzEyMTEwZjEwMTEwZjBmMTAwZjBmMTEwNzA2MGYwMjBmMGYwZjBmMGYwZjBmMGYwZjE0MGYwNzA2MGYwZjBmMGIwNDA0MjEwNDA0MGUxNTBmMTAwNzA2MTIwZjBmMDcxNjE3MTcxNzE4MDUwZjBmMGYwNzA2MGYwZjE0MDcxYTFiMWIxYjE5MDUxNTBmMDIwNzA2MTEwZjBmMjAxYTFiMWIxYjE5MWYwZjBmMGYwNzA2MGYwZjBmMDcxYTFiMWIxYjE5MDUxNTBmMTMwNzA2MTMxMDBmMDcxYTFiMWIxYjE5MDUwZjBmMGYwNzA2MGYwZjBmMGMwMTAxMWMwMTAxMGQwZjBmMTIwNzA2MGYwMjBmMGYxMDBmMGYxMDBmMGYxNTBmMGYwNzA2MGYxMDEyMGYwZjBmMGYwZjAyMGYwZjBmMGYwNzA2MTUwZjBmMGYwZjBmMGYxMDBmMGYxMTBmMGYwNzA4MWQxZDFkMWQxZDFkMWQxZDFkMWQxZDFkMWQwYTIyMjIyMjIyMjIyMjIyMjIwMDAwMDAwMjAwMDAyMDAyMDAwMDAwMDAwMDAwMjIwMDAwMDAwMDAwMDAyMDAyMDAyMjIyMjIwMjAwMjIwMDIwMjIyMjIyMDAyMDAyMDAyMjIyMjIwMjAwMjIwMDIwMjIyMjIyMDAyMDAyMDAyMjIyMjIwMjAwMjIwMDIwMjIyMjIyMDAyMDAyMDAyMjIyMjIwMjAwMjIwMDAwMDAwMDAwMDAyMDAyMDAwMDAwMDAwMDAwMjIwMDAwMDAwMDAwMDAyMDIyMjIyMjIyMjIyMjIyMDI=",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
         "mimeType": "application/mkcd-tilemap",
-        "displayName": "outer_room",
+        "data": "MTAwZjAwMGYwMDAzMDEwMTAxMDEwMTAxMDEwMTAxMDEwMTAxMDEwOTA1MTAwZjBmMGYxNTBmMWUwZjBmMGYwMjBmMTMwNzA2MGYxMzEyMTEwZjEwMTEwZjBmMTAwZjBmMTEwNzA2MGYwMjBmMGYwZjBmMGYwZjBmMGYwZjE0MGYwNzA2MGYwZjBmMGIwNDA0MjEwNDA0MGUxNTBmMTAwNzA2MTIwZjBmMDcxNjE3MTcxNzE4MDUwZjBmMGYwNzA2MGYwZjE0MDcxYTFiMWIxYjE5MDUxNTBmMDIwNzA2MTEwZjBmMjAxYTFiMWIxYjE5MWYwZjBmMGYwNzA2MGYwZjBmMDcxYTFiMWIxYjE5MDUxNTBmMTMwNzA2MTMxMDBmMDcxYTFiMWIxYjE5MDUwZjBmMGYwNzA2MGYwZjBmMGMwMTAxMWMwMTAxMGQwZjBmMTIwNzA2MGYwMjBmMGYxMDBmMGYxMDBmMGYxNTBmMGYwNzA2MGYxMDEyMGYwZjBmMGYwZjAyMGYwZjBmMGYwNzA2MTUwZjBmMGYwZjBmMGYxMDBmMGYxMTBmMGYwNzA4MWQxZDFkMWQxZDFkMWQxZDFkMWQxZDFkMWQwYTIyMjIyMjIyMjIyMjIyMjIwMDAwMDAwMjAwMDAyMDAyMDAwMDAwMDAwMDAwMjIwMDAwMDAwMDAwMDAyMDAyMDAyMjIyMjIwMjAwMjIwMDIwMjIyMjIyMDAyMDAyMDAyMjIyMjIwMjAwMjIwMDIwMjIyMjIyMDAyMDAyMDAyMjIyMjIwMjAwMjIwMDIwMjIyMjIyMDAyMDAyMDAyMjIyMjIwMjAwMjIwMDAwMDAwMDAwMDAyMDAyMDAwMDAwMDAwMDAwMjIwMDAwMDAwMDAwMDAyMDIyMjIyMjIyMjIyMjIyMDI=",
         "tileset": [
             "myTiles.transparency16",
             "sprites.dungeon.greenOuterNorth0",
@@ -136,15 +58,13 @@
             "sprites.dungeon.doorOpenWest",
             "sprites.dungeon.doorOpenEast",
             "sprites.dungeon.doorOpenSouth"
-        ]
+        ],
+        "displayName": "outer_room"
     },
     "level3": {
         "id": "level3",
-        "data": "MTAwNzAwMDcwMDAyMDcwNDBmMDQxNjAxMDgxMDEyMTQxMDEwMGEwNTExMTAxMDEwMGIwYTBlMTAxMDE1MTAxMDBkMDUwYjEwMTAxNDEwMGEwNTEzMTAxMzEwMTUwYTAzMDkwOTBjMDkwOTA2MjIyMjIyMjIwMDAwMjAwMjAwMDAyMjAwMDAyMDAyMDAwMDIyMDAwMDIwMjIyMjIyMDI=",
-        "dataEncoding": "base64",
-        "namespace": "myTiles.",
         "mimeType": "application/mkcd-tilemap",
-        "displayName": "inner_room",
+        "data": "MTAwNzAwMDcwMDAyMDcwNDBmMDQxNjAxMDgxMDEyMTQxMDEwMGEwNTExMTAxMDEwMGIwYTBlMTAxMDE1MTAxMDBkMDUwYjEwMTAxNDEwMGEwNTEzMTAxMzEwMTUwYTAzMDkwOTBjMDkwOTA2MjIyMjIyMjIwMDAwMjAwMjAwMDAyMjAwMDAyMDAyMDAwMDIyMDAwMDIwMjIyMjIyMDI=",
         "tileset": [
             "myTiles.transparency16",
             "sprites.dungeon.purpleOuterNorthEast",
@@ -169,6 +89,12 @@
             "sprites.dungeon.floorDark5",
             "sprites.dungeon.floorDark2",
             "sprites.dungeon.purpleSwitchUp"
-        ]
+        ],
+        "displayName": "inner_room"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myTiles"
     }
 }

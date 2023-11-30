@@ -1,10 +1,12 @@
 {
-    "myImages.image1": {
-        "id": "myImages.image1",
+    "image1": {
         "data": "hwQQABAAAAAAAAAA8A8AAAAA8P//+wAAAPA/s7vr7gAAvzOzu+/0D/A+4//+/7wPX+Szv0G/3fFPRTP+T969/VRF4+5E3t2xVEXj7kTevb1PRTP+T97d8V/ks79Bv7398D7j//7/vA8AvzOzu+/0DwDwP7O76+4AAADw///7AAAAAAAA8A8AAA==",
-        "dataEncoding": "base64",
-        "namespace": "myImages.",
         "mimeType": "image/x-mkcd-f4",
         "displayName": "player_character"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
     }
 }
