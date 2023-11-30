@@ -542,7 +542,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function OnButtonA() {
                 HideToolbar()
                 scene.centerCameraAt(scene.screenWidth() / 2, scene.screenHeight() / 2)
                 scene.setBackgroundColor(0)
-                cutscene_character = sprites.create(assets.image`player_character`, SpriteKind.Player)
+                cutscene_character = sprites.create(assets.image`DEV_player_character`, SpriteKind.Player)
                 cutscene_character.setPosition(scene.screenWidth() / 2, 100)
                 story.printText(player_name + " pulls the lever and hears a creaking sound in the other room...", scene.screenWidth() / 2, scene.screenHeight() / 3)
                 cutscene_character.sayText("I should investigate...")
@@ -595,7 +595,7 @@ function Level1(start_x: number = 1, start_y: number = 1) {
     //  Update global level variable
     level = 1
     //  Load tilemap
-    tiles.setCurrentTilemap(tilemap`outer_room`)
+    tiles.setCurrentTilemap(tilemap`DEV_outer_room`)
     //  Set variable tiles
     if (level1_chest_opened == true) {
         tiles.setTileAt(tiles.getTileLocation(7, 1), img`
@@ -619,7 +619,7 @@ function Level1(start_x: number = 1, start_y: number = 1) {
     }
     
     //  Create sprite and set global player character variable
-    player_character = sprites.create(assets.image`player_character`, SpriteKind.Player)
+    player_character = sprites.create(assets.image`DEV_player_character`, SpriteKind.Player)
     //  Place player on starting tile
     tiles.placeOnTile(player_character, tiles.getTileLocation(start_x, start_y))
     //  Update camera settings
@@ -636,7 +636,7 @@ function Level2(start_x: number = 1, start_y: number = 1) {
     //  Update global level variable
     level = 2
     //  Load tilemap
-    tiles.setCurrentTilemap(tilemap`inner_room`)
+    tiles.setCurrentTilemap(tilemap`DEV_inner_room`)
     //  Set variable tiles
     // Set lever to correct position
     if (level1_chest_opened == true) {
@@ -661,9 +661,7 @@ function Level2(start_x: number = 1, start_y: number = 1) {
     }
     
     //  Create sprite and set global player character variable
-    player_character = sprites.create(assets.image`
-            player_character
-        `, SpriteKind.Player)
+    player_character = sprites.create(assets.image`DEV_player_character`, SpriteKind.Player)
     //  Place player on starting tile
     tiles.placeOnTile(player_character, tiles.getTileLocation(start_x, start_y))
     //  Update camera settings

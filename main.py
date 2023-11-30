@@ -530,7 +530,7 @@ def CutsceneChestOpens():
     HideToolbar()
     scene.center_camera_at(scene.screen_width()/2, scene.screen_height()/2)
     scene.set_background_color(0)
-    cutscene_character = sprites.create(assets.image("""player_character"""),
+    cutscene_character = sprites.create(assets.image("""DEV_player_character"""),
         SpriteKind.player)
     cutscene_character.set_position(scene.screen_width()/2, 100)
     story.print_text(player_name + " pulls the lever and hears a creaking sound in the other room...",
@@ -556,7 +556,7 @@ def Level1(start_x: number = 1, start_y: number = 1):
     # Update global level variable
     level = 1
     # Load tilemap
-    tiles.set_current_tilemap(tilemap("""outer_room"""))
+    tiles.set_current_tilemap(tilemap("""DEV_outer_room"""))
     # Set variable tiles
     if level1_chest_opened == True:
         tiles.set_tile_at(tiles.get_tile_location(7, 1), img("""
@@ -578,7 +578,7 @@ def Level1(start_x: number = 1, start_y: number = 1):
             . b b . . . . . . . . . . b b .
         """))
     # Create sprite and set global player character variable
-    player_character = sprites.create(assets.image("""player_character"""),
+    player_character = sprites.create(assets.image("""DEV_player_character"""),
         SpriteKind.player)
     # Place player on starting tile
     tiles.place_on_tile(player_character, tiles.get_tile_location(start_x, start_y))
@@ -595,7 +595,7 @@ def Level2(start_x: number = 1, start_y: number = 1):
     # Update global level variable
     level = 2
     # Load tilemap
-    tiles.set_current_tilemap(tilemap("""inner_room"""))
+    tiles.set_current_tilemap(tilemap("""DEV_inner_room"""))
     # Set variable tiles
     #Set lever to correct position
     if level1_chest_opened == True:
@@ -618,9 +618,7 @@ def Level2(start_x: number = 1, start_y: number = 1):
             c c c c c c c c c c c c c c c c
         """))
     # Create sprite and set global player character variable
-    player_character = sprites.create(assets.image("""
-            player_character
-        """),
+    player_character = sprites.create(assets.image("""DEV_player_character"""),
         SpriteKind.player)
     # Place player on starting tile
     tiles.place_on_tile(player_character, tiles.get_tile_location(start_x, start_y))
