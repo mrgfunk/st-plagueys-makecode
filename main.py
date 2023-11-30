@@ -1,4 +1,4 @@
-# Global Variables
+# Global Variables -----------------------------------------------------
 player_character:Sprite = None
 player_name = "Daisy"
 level = 0
@@ -10,13 +10,14 @@ toolbar_visible: bool = None
 # Level specific variables
 level1_chest_opened = False
 
+# Player Helper Functions -----------------------------------------------
 def FreezePlayer(ms=500):
     player_character.set_velocity(0, 0)
     controller.move_sprite(player_character, 0, 0)
     pause(ms)
     controller.move_sprite(player_character)
     return
-
+# Toolbar Helper functions ----------------------------------------------
 def HideToolbar():
     global toolbar, toolbar_visible, toolbar_selected
     toolbar_selected = False
@@ -29,6 +30,31 @@ def ShowToolbar():
     toolbar_selected = False
     toolbar_visible = True
     toolbar.set_flag(SpriteFlag.INVISIBLE, False)
+    # Toolbar colours are 0-15 (same as colour palette)
+    toolbar.set_color(ToolbarColorAttribute.BOX_BACKGROUND, 1)
+    toolbar.set_color(ToolbarColorAttribute.BOX_OUTLINE, 15)
+    toolbar.set_color(ToolbarColorAttribute.BOX_SELECTED_OUTLINE, 2)
+    return
+
+def ToggleToolbarSelected():
+    global toolbar_selected
+    if toolbar_visible == True:
+        toolbar_selected = not toolbar_selected
+        if toolbar_selected == True:
+            # Freeze player movement
+            player_character.set_velocity(0, 0)
+            controller.move_sprite(player_character, 0, 0)
+            # Change colours
+            toolbar.set_color(ToolbarColorAttribute.BOX_BACKGROUND, 2)
+            toolbar.set_color(ToolbarColorAttribute.BOX_OUTLINE, 15)
+            toolbar.set_color(ToolbarColorAttribute.BOX_SELECTED_OUTLINE, 5)
+        else:
+            # Enable player movement
+            controller.move_sprite(player_character)
+            # Reset colours
+            toolbar.set_color(ToolbarColorAttribute.BOX_BACKGROUND, 1)
+            toolbar.set_color(ToolbarColorAttribute.BOX_OUTLINE, 15)
+            toolbar.set_color(ToolbarColorAttribute.BOX_SELECTED_OUTLINE, 2)
     return
 
 def CreateToolbar():
@@ -43,7 +69,6 @@ def CreateToolbar():
     # Update globale variables
     toolbar_selected = False
     toolbar_visible = False
-    toolbar.set_color(ToolbarColorAttribute.BOX_OUTLINE, 1)
     return
 
 def AddToolbarItem(item):
@@ -52,8 +77,8 @@ def AddToolbarItem(item):
         toolbar.get_items().append(item)
     toolbar.update()
     return
-
-def on_hit_wall(sprite, location):
+# OnHitWall Event Handler -----------------------------------------------
+def OnHitWall(sprite, location):
     player_location = sprite.tilemap_location()
     if level == 1:
         # Check if we are at the north door
@@ -256,8 +281,8 @@ def on_hit_wall(sprite, location):
                 sprites.destroy(sprite)
                 Level1(7, 11)     
     return
-scene.on_hit_wall(SpriteKind.player, on_hit_wall)
-
+scene.on_hit_wall(SpriteKind.player, OnHitWall)
+# OnButtonA Event Handler -----------------------------------------------
 def OnButtonA():
     global toolbar
     if toolbar_selected:
@@ -480,27 +505,19 @@ def OnButtonA():
             story.start_cutscene(CutsceneChestOpens)
     return
 controller.A.on_event(ControllerButtonEvent.PRESSED, OnButtonA)
-
-
+# OnButtonB Event Handler -----------------------------------------------
 def OnButtonB():
-    global toolbar_selected
-    if toolbar_visible == True:
-        toolbar_selected = not toolbar_selected
-        if toolbar_selected == True:
-            player_character.set_velocity(0, 0)
-            controller.move_sprite(player_character, 0, 0)
-        else:
-            controller.move_sprite(player_character)
+    ToggleToolbarSelected()
     return
 controller.B.on_event(ControllerButtonEvent.PRESSED, OnButtonB)
-
+# OnButtonLeft Event Handler ---------------------------------------------
 def OnButtonLeft():
     if toolbar_selected:
         toolbar.set_number(ToolbarNumberAttribute.SELECTED_INDEX,
         max(toolbar.get_number(ToolbarNumberAttribute.SELECTED_INDEX) - 1, 0))
     return
 controller.left.on_event(ControllerButtonEvent.PRESSED, OnButtonLeft)
-
+# OnButtonRight Event Handler --------------------------------------------
 def OnButtonRight():
     if toolbar_selected:
         toolbar.set_number(ToolbarNumberAttribute.SELECTED_INDEX,
@@ -508,7 +525,7 @@ def OnButtonRight():
             toolbar.get_number(ToolbarNumberAttribute.MAX_ITEMS) - 1))
     return
 controller.right.on_event(ControllerButtonEvent.PRESSED, OnButtonRight)
-
+# Cutscenes --------------------------------------------------------------
 def CutsceneChestOpens():
     HideToolbar()
     scene.center_camera_at(scene.screen_width()/2, scene.screen_height()/2)
@@ -526,13 +543,14 @@ def CutsceneChestOpens():
     Level2(5, 1)
     return
 
-# Intro
-def Intro():
-    global player_name
+# GameStart --------------------------------------------------------------
+def GameStart():
+    CreateToolbar()
+    info.set_life(3)
     game.splash("St Plaguey's", "Made by Programming Club")
     Level1()
     return
-
+# Levels -----------------------------------------------------------------
 def Level1(start_x: number = 1, start_y: number = 1):
     global level, player_character
     # Update global level variable
@@ -616,8 +634,5 @@ def Level2(start_x: number = 1, start_y: number = 1):
     return
 
 
-# Start Game
-CreateToolbar()
-info.set_life(3)
-Intro()
-
+# Game -------------------------------------------------------------------
+GameStart()

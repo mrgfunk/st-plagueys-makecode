@@ -1,4 +1,4 @@
-//  Global Variables
+//  Global Variables -----------------------------------------------------
 let player_character : Sprite = null
 let player_name = "Daisy"
 let level = 0
@@ -9,6 +9,7 @@ let toolbar_selected : boolean = null
 let toolbar_visible : boolean = null
 //  Level specific variables
 let level1_chest_opened = false
+//  Player Helper Functions -----------------------------------------------
 function FreezePlayer(ms: number = 500) {
     player_character.setVelocity(0, 0)
     controller.moveSprite(player_character, 0, 0)
@@ -17,6 +18,7 @@ function FreezePlayer(ms: number = 500) {
     return
 }
 
+//  Toolbar Helper functions ----------------------------------------------
 function HideToolbar() {
     
     toolbar_selected = false
@@ -30,6 +32,36 @@ function ShowToolbar() {
     toolbar_selected = false
     toolbar_visible = true
     toolbar.setFlag(SpriteFlag.Invisible, false)
+    //  Toolbar colours are 0-15 (same as colour palette)
+    toolbar.set_color(ToolbarColorAttribute.BoxBackground, 1)
+    toolbar.set_color(ToolbarColorAttribute.BoxOutline, 15)
+    toolbar.set_color(ToolbarColorAttribute.BoxSelectedOutline, 2)
+    return
+}
+
+function ToggleToolbarSelected() {
+    
+    if (toolbar_visible == true) {
+        toolbar_selected = !toolbar_selected
+        if (toolbar_selected == true) {
+            //  Freeze player movement
+            player_character.setVelocity(0, 0)
+            controller.moveSprite(player_character, 0, 0)
+            //  Change colours
+            toolbar.set_color(ToolbarColorAttribute.BoxBackground, 2)
+            toolbar.set_color(ToolbarColorAttribute.BoxOutline, 15)
+            toolbar.set_color(ToolbarColorAttribute.BoxSelectedOutline, 5)
+        } else {
+            //  Enable player movement
+            controller.moveSprite(player_character)
+            //  Reset colours
+            toolbar.set_color(ToolbarColorAttribute.BoxBackground, 1)
+            toolbar.set_color(ToolbarColorAttribute.BoxOutline, 15)
+            toolbar.set_color(ToolbarColorAttribute.BoxSelectedOutline, 2)
+        }
+        
+    }
+    
     return
 }
 
@@ -45,7 +77,6 @@ function CreateToolbar() {
     //  Update globale variables
     let toolbar_selected = false
     let toolbar_visible = false
-    toolbar.set_color(ToolbarColorAttribute.BoxOutline, 1)
     return
 }
 
@@ -59,7 +90,8 @@ function AddToolbarItem(item: any) {
     return
 }
 
-scene.onHitWall(SpriteKind.Player, function on_hit_wall(sprite: Sprite, location: tiles.Location) {
+//  OnHitWall Event Handler -----------------------------------------------
+scene.onHitWall(SpriteKind.Player, function OnHitWall(sprite: Sprite, location: tiles.Location) {
     let door_location: tiles.Location;
     let player_location = sprite.tilemapLocation()
     if (level == 1) {
@@ -284,6 +316,7 @@ scene.onHitWall(SpriteKind.Player, function on_hit_wall(sprite: Sprite, location
     
     return
 })
+//  OnButtonA Event Handler -----------------------------------------------
 controller.A.onEvent(ControllerButtonEvent.Pressed, function OnButtonA() {
     let good_foods: string[];
     let bad_foods: string[];
@@ -525,21 +558,12 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function OnButtonA() {
     
     return
 })
+//  OnButtonB Event Handler -----------------------------------------------
 controller.B.onEvent(ControllerButtonEvent.Pressed, function OnButtonB() {
-    
-    if (toolbar_visible == true) {
-        toolbar_selected = !toolbar_selected
-        if (toolbar_selected == true) {
-            player_character.setVelocity(0, 0)
-            controller.moveSprite(player_character, 0, 0)
-        } else {
-            controller.moveSprite(player_character)
-        }
-        
-    }
-    
+    ToggleToolbarSelected()
     return
 })
+//  OnButtonLeft Event Handler ---------------------------------------------
 controller.left.onEvent(ControllerButtonEvent.Pressed, function OnButtonLeft() {
     if (toolbar_selected) {
         toolbar.set_number(ToolbarNumberAttribute.SelectedIndex, Math.max(toolbar.get_number(ToolbarNumberAttribute.SelectedIndex) - 1, 0))
@@ -547,6 +571,7 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function OnButtonLeft() {
     
     return
 })
+//  OnButtonRight Event Handler --------------------------------------------
 controller.right.onEvent(ControllerButtonEvent.Pressed, function OnButtonRight() {
     if (toolbar_selected) {
         toolbar.set_number(ToolbarNumberAttribute.SelectedIndex, Math.min(toolbar.get_number(ToolbarNumberAttribute.SelectedIndex) + 1, toolbar.get_number(ToolbarNumberAttribute.MaxItems) - 1))
@@ -554,14 +579,17 @@ controller.right.onEvent(ControllerButtonEvent.Pressed, function OnButtonRight()
     
     return
 })
-//  Intro
-function Intro() {
-    
+//  Cutscenes --------------------------------------------------------------
+//  GameStart --------------------------------------------------------------
+function GameStart() {
+    CreateToolbar()
+    info.setLife(3)
     game.splash("St Plaguey's", "Made by Programming Club")
     Level1()
     return
 }
 
+//  Levels -----------------------------------------------------------------
 function Level1(start_x: number = 1, start_y: number = 1) {
     
     //  Update global level variable
@@ -648,7 +676,5 @@ function Level2(start_x: number = 1, start_y: number = 1) {
     return
 }
 
-//  Start Game
-CreateToolbar()
-info.setLife(3)
-Intro()
+//  Game -------------------------------------------------------------------
+GameStart()
